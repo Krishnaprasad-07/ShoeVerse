@@ -1,0 +1,133 @@
+/* ================= LAYOUT ================= */
+
+.products-layout {
+  display: flex;
+  gap: 40px;
+  padding: 40px 60px;
+  align-items: flex-start;
+}
+
+/* ================= SIDEBAR ================= */
+
+.filters {
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+
+  position: sticky;
+  top: 100px; /* adjust if navbar height is different */
+  height: fit-content;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.filter-title {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-options {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ================= GRID ================= */
+
+.products-content {
+  flex: 1;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* ================= CARD ================= */
+
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ================= IMAGE SECTION ================= */
+
+.product-image-wrapper {
+  width: 100%;
+  height: 260px;        /* fixed height */
+  background: #f6f6f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;   /* show full shoe */
+}
+
+/* ================= INFO ================= */
+
+.product-info {
+  margin-top: 15px;
+}
+
+.product-brand {
+  font-size: 13px;
+  color: #777;
+  text-transform: capitalize;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.current-price {
+  color: #D4AF37;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.add-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-btn:hover {
+  background: #D4AF37;
+  color: black;
+}

@@ -1,0 +1,142 @@
+/* Full Screen Center Layout */
+.auth-container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+  padding: 20px;
+}
+
+/* Main Card */
+.auth-box {
+  width: 400px;
+  padding: 45px 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  position: relative;
+}
+
+/* Gold top accent line */
+.auth-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #D4AF37;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.auth-box h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Form Layout */
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Inputs */
+.auth-box input {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.auth-box input:focus {
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+  outline: none;
+}
+
+/* Primary Button */
+.auth-box button[type="submit"] {
+  background: #D4AF37;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.auth-box button[type="submit"]:hover {
+  background: #b9972f;
+  transform: translateY(-2px);
+}
+
+/* Divider */
+.divider {
+  margin: 28px 0;
+  position: relative;
+  text-align: center;
+}
+
+.divider span {
+  background: #fff;
+  padding: 0 12px;
+  font-size: 13px;
+  color: #777;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #eee;
+  z-index: -1;
+}
+
+/* Google Button */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.google-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.google-btn:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+/* Bottom Text */
+.auth-box p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-box a {
+  color: #D4AF37;
+  font-weight: 500;
+}

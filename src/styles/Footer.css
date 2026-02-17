@@ -1,0 +1,67 @@
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 60px 80px 30px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
+.footer h2 {
+  font-size: 24px;
+}
+
+.logo-gold {
+  color: #D4AF37;
+}
+
+.footer p {
+  margin-top: 15px;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  display: block;
+  margin-bottom: 10px;
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #D4AF37;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  color: #aaa;
+  font-size: 14px;
+}
+/* Fix logo colors inside footer */
+.footer .logo-black {
+  color: #fff;
+}
+
+.footer .logo-gold {
+  color: #D4AF37;
+}
