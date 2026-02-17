@@ -131,3 +131,27 @@
   background: #D4AF37;
   color: black;
 }
+
+/* ===== CLEAR BUTTON ===== */
+
+.clear-btn {
+  background: transparent;
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.clear-btn:hover {
+  background: #D4AF37;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+}
+
+.clear-btn:active {
+  transform: scale(0.96);
+}

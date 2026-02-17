@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "../styles/Auth.css";
 
-const Signup = () => {
+const Signup = ({ setUser }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,17 +22,29 @@ const Signup = () => {
       return;
     }
 
-    alert("Signup Successful ✅");
+    // Get existing users
+    const savedUsers = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Clear fields
-    setName("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
-  };
+    // Check duplicate email
+    const userExists = savedUsers.find((u) => u.email === email);
 
-  const handleGoogleSignup = () => {
-    alert("Google Sign-Up clicked");
+    if (userExists) {
+      alert("Email already registered");
+      return;
+    }
+
+    const newUser = { name, email, password };
+
+    // Save updated users list
+    localStorage.setItem(
+      "users",
+      JSON.stringify([...savedUsers, newUser])
+    );
+
+    // Log in user automatically
+    setUser(newUser);
+
+    navigate("/");
   };
 
   return (
@@ -70,14 +83,6 @@ const Signup = () => {
 
           <button type="submit">Sign Up</button>
         </form>
-
-        <div className="divider">
-          <span>OR</span>
-        </div>
-
-        <button className="google-btn" onClick={handleGoogleSignup}>
-          Continue with Google
-        </button>
 
         <p>
           Already have an account? <Link to="/login">Login</Link>
