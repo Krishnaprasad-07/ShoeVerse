@@ -106,21 +106,25 @@ const Navbar = ({ cart, setCart, user, setUser }) => {
             />
 
             {/* PROFILE */}
-            {user ? (
-              <div className="profile-box">
-                👤 {user.name}
-                <button className="logout-btn" onClick={handleLogout}>
-                  Logout
-                </button>
-              </div>
-            ) : (
-              <div
-                className="profile-icon"
-                onClick={() => navigate("/login")}
-              >
-                👤
-              </div>
-            )}
+{user ? (
+  <div className="profile-container">
+    <div className="profile-trigger">
+      👤 <span className="username">{user.name}</span> ▾
+    </div>
+
+    <div className="profile-dropdown">
+      <button onClick={handleLogout}>Logout</button>
+    </div>
+  </div>
+) : (
+  <div
+    className="profile-icon"
+    onClick={() => navigate("/login")}
+  >
+    👤
+  </div>
+)}
+
 
             {/* CART */}
             <div
