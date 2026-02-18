@@ -153,11 +153,11 @@ npm run dev
 B.Tech Computer Science Engineering  
 Full Stack Developer (MERN Stack)
 
-**Pavithra Janardhanan** 
+**Pavithra Janardhanan**  
 B.Tech Computer Science Engineering  
 Full Stack Developer (MERN Stack)
 
-**Deepika M**
+**Deepika M**  
 B.Tech Computer Science Engineering  
 Full Stack Developer (MERN Stack)
 
