@@ -57,6 +57,7 @@
   color: #aaa;
   font-size: 14px;
 }
+
 /* Fix logo colors inside footer */
 .footer .logo-black {
   color: #fff;
@@ -64,4 +65,65 @@
 
 .footer .logo-gold {
   color: #D4AF37;
+}
+
+/* ================================= */
+/* RESPONSIVE DESIGN */
+/* ================================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 50px 40px 30px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer h2 {
+    font-size: 22px;
+  }
+
+  .footer-links h4,
+  .footer-contact h4 {
+    margin-bottom: 15px;
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+    font-size: 13px;
+  }
+
+  .social-icons {
+    font-size: 16px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .footer {
+    padding: 35px 15px 15px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
 }
