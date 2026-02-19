@@ -3,8 +3,6 @@
 ShoeVerse is a modern footwear e-commerce web application built using **React + Vite**.  
 It provides a smooth shopping experience with product filtering, authentication, and cart management using localStorage.
 
-note : This version is not mobile responsive - currently working on it
-
 ---
 
 ## 🚀 Features
