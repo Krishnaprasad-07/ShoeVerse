@@ -11,6 +11,7 @@
 /* Main Card */
 .auth-box {
   width: 400px;
+  max-width: 100%;
   padding: 45px 40px;
   background: #ffffff;
   border-radius: 12px;
@@ -53,6 +54,8 @@
   border-radius: 6px;
   font-size: 14px;
   transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .auth-box input:focus {
@@ -71,6 +74,7 @@
   font-weight: 600;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .auth-box button[type="submit"]:hover {
@@ -116,6 +120,7 @@
   border-radius: 6px;
   font-weight: 500;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .google-btn img {
@@ -139,4 +144,98 @@
 .auth-box a {
   color: #D4AF37;
   font-weight: 500;
+  text-decoration: none;
+}
+
+/* ================================= */
+/* RESPONSIVE SYSTEM */
+/* ================================= */
+
+
+/* ---------- LARGE TABLET (769px–1024px) ---------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .auth-container {
+    padding: 40px 20px;
+  }
+
+  .auth-box {
+    width: 500px;   /* slightly wider than mobile */
+    max-width: 90%;
+    padding: 45px 40px;
+  }
+
+  .auth-box h2 {
+    font-size: 24px;
+  }
+
+}
+
+
+/* ---------- SMALL TABLET (600px–768px) ---------- */
+@media (min-width: 600px) and (max-width: 768px) {
+
+  .auth-container {
+    padding: 30px 20px;
+    min-height: 100vh;
+  }
+
+  .auth-box {
+    width: 420px;
+    max-width: 95%;
+    padding: 35px 30px;
+  }
+
+  .auth-box h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+}
+
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 599px) {
+
+  .auth-container {
+    padding: 20px 15px;
+    min-height: 100vh;
+  }
+
+  .auth-box {
+    width: 100%;
+    padding: 30px 22px;
+  }
+
+  .auth-box h2 {
+    font-size: 20px;
+    margin-bottom: 22px;
+  }
+
+  .auth-box input {
+    padding: 11px;
+  }
+
+  .auth-box button[type="submit"] {
+    padding: 11px;
+  }
+
+  .google-btn {
+    padding: 10px;
+  }
+
+}
+
+
+/* ---------- SMALL PHONES ---------- */
+@media (max-width: 400px) {
+
+  .auth-box {
+    padding: 25px 16px;
+  }
+
+  .auth-box p {
+    font-size: 13px;
+  }
+
 }

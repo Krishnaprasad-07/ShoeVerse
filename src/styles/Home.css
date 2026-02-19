@@ -116,3 +116,113 @@
   color: #D4AF37;
   font-weight: 600;
 }
+
+/* ================================= */
+/* RESPONSIVE DESIGN */
+/* ================================= */
+
+/* =========================
+   TABLET (769px - 1024px)
+========================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .section {
+    padding: 60px 40px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  /* 2 balanced columns */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  /* Use aspect ratio instead of fixed height */
+  .image-wrapper {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .main-img,
+  .hover-img {
+    object-fit: cover;
+  }
+
+}
+
+
+/* =========================
+   MOBILE (0px - 768px)
+========================= */
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 50px 20px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  /* Horizontal scroll */
+  .product-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .product-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-card {
+    min-width: 70%;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  /* Keep consistent ratio */
+  .image-wrapper {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .hero-btn-container {
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 480px) {
+
+  .image-wrapper {
+    aspect-ratio: 1 / 1;
+  }
+
+  .hero-btn {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+
+}
