@@ -13,10 +13,9 @@
   max-width: 600px;
 }
 
-/* LOCKED IMAGE BOX (NO SHIFTING) */
 .main-image-box {
   width: 100%;
-  height: 600px;              /* LOCKED HEIGHT */
+  height: 600px;
   background: #f6f6f6;
   border-radius: 16px;
   display: flex;
@@ -29,10 +28,8 @@
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
-  transition: 0.3s ease;
 }
 
-/* THUMBNAILS */
 .thumbnail-row {
   display: flex;
   gap: 15px;
@@ -46,11 +43,6 @@
   border-radius: 10px;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: 0.2s ease;
-}
-
-.thumbnail:hover {
-  transform: scale(1.05);
 }
 
 .active-thumb {
@@ -61,6 +53,8 @@
 
 .product-info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-info h1 {
@@ -70,43 +64,29 @@
 
 .brand {
   color: #888;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
-.rating {
-  margin-bottom: 15px;
-  font-size: 16px;
+/* Desktop default */
+.price-rating-row {
+  display: block;
 }
 
 .price {
   font-size: 28px;
   font-weight: bold;
   color: #d4af37;
-  margin: 20px 0;
+  margin: 18px 0;
 }
 
-.add-btn {
-  padding: 14px 35px;
-  background: black;
-  color: white;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s ease;
+.rating {
+  margin-bottom: 15px;
 }
 
-.add-btn:hover {
-  background: #d4af37;
-  color: black;
-}
+/* SIZE */
 
-.description {
-  margin-top: 40px;
-  line-height: 1.6;
-}
-/* SIZE SECTION */
 .size-section {
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
 .size-options {
@@ -120,11 +100,6 @@
   border: 1px solid #ccc;
   background: white;
   cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.size-btn:hover {
-  border-color: #000;
 }
 
 .active-size {
@@ -133,9 +108,10 @@
   border-color: black;
 }
 
-/* QUANTITY SECTION */
+/* QUANTITY */
+
 .quantity-section {
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
 .quantity-controls {
@@ -151,14 +127,157 @@
   border: 1px solid #ccc;
   background: white;
   cursor: pointer;
-  font-size: 18px;
-  transition: 0.2s;
 }
 
-.quantity-controls button:hover {
-  background: #f5f5f5;
+/* ADD TO CART */
+
+.add-btn {
+  margin-top: 20px;
+  padding: 14px;
+  background: black;
+  color: white;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.quantity-controls span {
-  font-size: 18px;
+.add-btn:hover {
+  background: #d4af37;
+  color: black;
+}
+
+/* DESCRIPTION */
+
+.description {
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .product-page {
+    flex-direction: column;
+    padding: 20px 16px;
+    gap: 18px;
+  }
+
+  .main-image-box {
+    height: 260px;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+
+  .product-info h1 {
+    font-size: 20px;
+  }
+
+  /* Mobile: price and rating side by side */
+  @media (max-width: 768px) {
+
+  .product-page {
+    flex-direction: column;
+    padding: 18px 14px;
+    gap: 12px;
+  }
+
+  .main-image-box {
+    height: 250px;
+  }
+
+  .thumbnail {
+    width: 55px;
+    height: 55px;
+  }
+
+  .product-info h1 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .brand {
+    margin-bottom: 4px;
+  }
+
+  /* Price & Rating tighter */
+  .price-rating-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 0;
+  }
+
+  .price {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .rating {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  /* Tighten sections */
+  .size-section {
+    margin: 8px 0;
+  }
+
+  .quantity-section {
+    margin: 8px 0;
+  }
+
+  .size-options {
+    margin-top: 6px;
+  }
+
+  .quantity-controls {
+    margin-top: 6px;
+  }
+
+  .description {
+    margin-top: 12px;
+  }
+
+  .add-btn {
+    margin-top: 14px;
+    padding: 12px;
+  }
+
+}
+
+}
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .product-page {
+    padding: 40px 50px;
+    gap: 40px;
+  }
+
+  .gallery-section {
+    max-width: 500px;
+  }
+
+  .main-image-box {
+    height: 450px;
+  }
+
+  .product-info h1 {
+    font-size: 28px;
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
 }
